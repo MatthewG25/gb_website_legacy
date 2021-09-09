@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+<h2 align="center"><span lang="en-gb">Best Practice</span></h2>
+
+<div class="row" style="margin-top:40px">
+<div class="column" align="center">
+
+	<img alt="" height="130" width="101" src={% static "records.png"%} ><p>
+	<span lang="en-gb">Records</span></p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="130" width="178" src={% static "supervision.png" %}><p>
+	<span lang="en-gb">Supervision</span></p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="130" width="123" src={% static "evac.png"%} ><p>
+	<span lang="en-gb">Evacuation</span></p>
+
+</div>
+</div>
+<div class="row" style="margin-top:40px">
+<div class="column" align="center">
+
+	<img alt="" height="130" width="139" src={% static "handover.png"%}><p>
+	<span lang="en-gb">Handover Procedures</span></p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="130" width="97" src={% static "planning.png" %} ><p>
+	<span lang="en-gb">Programme Planning</span></p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="130" src="../static_files/firstaid.png" width="167"><p>
+	<span lang="en-gb">First Aid</span></p>
+
+</div>
+</div>
+<div class="row" style="margin-top:40px">
+<div class="column" align="center">
+
+	<img alt="" height="130" src="../static_files/accidents.png" width="168"><p>
+	<span lang="en-gb">Accidents / Incidents</span></p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="130" src="../static_files/outings.png" width="128"><p>
+	<span lang="en-gb">Outings and Trips</span></p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="130" src="../static_files/tranport.png" width="129"><p>
+	<span lang="en-gb">Tranportation</span></p>
+
+</div>
+</div>
+
+<div class="row" align="center">
+    <audio id="intro_track" controls autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+
+    <p><a id="next" href="/training/part2b"><button>Next</button></a></p>
+</div>
+
+<div align="center" style="margin-top: 20px">
+  	  <p><span lang="en-gb">Click PDF icon for transcript of audio.</span></p>
+</div>
+	<div align="center">
+  	    <p><img alt="" height="51" src= {% static "g8.png" width="45"></p>
+</div>
+
+
+{% endblock %}

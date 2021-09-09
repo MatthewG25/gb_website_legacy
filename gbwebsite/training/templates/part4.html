@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+    <pre>The Girls’ Brigade Ireland is committed to providing a caring, supportive and friendly environment where children learn to value and respect each other and are challenged to reach their full potential through active participation.  The Girls’ Brigade Ireland will not tolerate bullying by anyone in any of its activities.
+
+Leaders should be familiar with the Girls’ Brigade Ireland Anti-Bullying policy so they are equipped to prevent bullying in their companies and know how to respond to bullying should it occur.
+
+In particular leaders should be familiar with the cyberbullying section of the Anti-Bullying policy, especially the actions they should take if they consider a child is the target of cyberbullying or if a child discloses they are a target of cyberbullying.  It is important to note that serious cases of cyberbullying should be reported to the Gardai.  The Child Safeguarding Team are available to support leaders in situations of concerns or disclosures by members of cyberbullying.
+
+
+The Girls’ Brigade Ireland has a Complaints Policy for dealing with complaints as situations can arise where children or their parents/guardians are not happy with the way their child was treated at an event or activity run by the Girls Brigade Ireland.
+
+Leaders should be familiar with the Complaints Policy so they know how to deal with a complaint if one is ever received by them.
+
+Leaders can access these policies on the GB website. (Can’t find Anti-bullying on website)</pre>
+    <a id="next" href="/training/part5" style.display="none">Next</a>
+    <audio id="intro_track" autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+
+{% endblock %}

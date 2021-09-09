@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Login
+{% endblock %}
+{% block style %}
+
+{% endblock %}
+{% block body %}
+<div align="center">
+    <h2 align="center">Login</h2>
+    <p><span lang="en-gb">Please login with your email and password or Register
+	your account.</span><img alt="" style="float: right" width="516" height="480" src={% static "20201010_104108.jpg" %}/></p>
+    <div align="center">
+	<form action="/login/" method="POST"/>
+        {% csrf_token %} {{ form.as_table }}<br />
+        <button><input type="submit" value="Login"/></button>
+    </form>
+</div>
+<p>&nbsp;</p>
+<div align="center">Click here to <br />
+	    <a href="/signup/"><button>Register</button></a>
+	</div>
+</div>
+
+
+{% endblock %}

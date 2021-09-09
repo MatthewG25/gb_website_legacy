@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+<h2 align="center"><span lang="en-gb">Why do we need Safeguarding Policies
+	and Procedures?</span></h2>
+
+<div class="row" style="margin-top:40px">
+<div class="column" align="center">
+
+	<img alt="" height="129" width="91" src={% static "adult-child.png" %} ><p>Keeping everyone safe</p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="129" width="150" src={% static "scales.png" %} ><p>Meeting Legal Requirement</p>
+</div>
+
+<div class="column" align="center">
+
+
+	<img alt="" height="129" width="95" src={% static "doc_1.png" %}><p>Child Safeguarding Statement</p>
+
+</div>
+</div>
+
+<div class="row" align="center">
+    <audio id="intro_track" controls autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+
+    <p><a id="next" href="/training/part2a"><button>Next</button></a></p>
+</div>
+
+<div align="center" style="margin-top: 20px">
+  	  <p><span lang="en-gb">Click PDF icon for transcript of audio</span>.</p>
+</div>
+	<div align="center">
+  	    <p><img alt="" height="51" width="45" src={% static "g8.png" %}></p>
+</div>
+{% endblock %}

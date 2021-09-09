@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+    <pre></pre>
+    <a id="next" href="/training/part2a" style.display="none">Next</a>
+    <audio id="intro_track" autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+
+{% endblock %}

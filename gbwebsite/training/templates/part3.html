@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+    <pre>The Girls’ Brigade Ireland shall take all reasonable steps to ensure that all leaders who come into contact with children are suitable persons for such work.  All adults who are regularly volunteering with The Girls’ Brigade Ireland must complete our leader recruitment process which includes Garda Vetting.
+
+Parents, guests etc volunteering as a once-off do not need to complete leader recruitment but should be supervised at all times by leaders.
+
+Potential leaders must:
+Register for a trial membership
+Complete a vetting invitation form
+Provide originals and copies of id
+Complete Captains recommendation form with the Captain
+Submit all paperwork to HQ for processing
+Finish Garda vetting online
+
+Captains and new leaders will be notified when Garda vetting and reference checks are completed and appointment ratified by the National Board
+
+Following ratification of appointment the new leader should update their trial membership
+
+No potential leaders should start working with girls in a company until the leader recruitment process has been completed.
+
+
+
+Any Brigaders or other teenagers aged 16-17 need to complete Garda vetting in order to volunteer within companies and work with younger age groups.
+
+All new leaders are required to attend a Child Safeguarding training session within twelve months of their appointment.
+
+All leaders within the organisation must complete Garda vetting every three years.</pre>
+    <a id="next" href="/training/part4" style.display="none">Next</a>
+    <audio id="intro_track" autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+
+{% endblock %}

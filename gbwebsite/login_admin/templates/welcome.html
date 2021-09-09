@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Welcome to GB Training.{% endblock %}
+{% block style %}
+{% endblock %}
+{% block body %}
+    <h1 align="center"><img alt="" height="107" src="GB_logo.png" width="149"></h1>
+	<h1 align="center" class="centre">Child Protection Refresher Training</h1>
+
+    <p><span lang="en-gb">This refresher course is designed for leaders who have
+	already completed their face to face Child Proctection Training.&nbsp; This
+	refresher course must be undertaken every 3 years after completing the face
+	to face child protection training.</span></p>
+	<p>{% if user.is_authenticated %}
+        <a href="training/">Start Training</a></p>
+    <p><span lang="en-gb">You must complete the refresher training course before
+	you begin the Assessment.</span></p>
+	<p>{% endif %} {% if user.is_training_completed %}
+        <a href="assessment/">Start Assessment</a>
+    {% endif %} </p>
+
+{% endblock %}

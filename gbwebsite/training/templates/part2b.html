@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+    <pre>Codes of Behaviour provide protection for everyone in The Girls’ Brigade Ireland, including children, employees and leaders.
+        It is important that everyone involved has guidelines on what is expected, and what is not accepted, with respect to their behaviour.
+Leaders must comply at all times with the Code of Behaviour which includes:
+· Treat all children equally, treat all children as individuals;
+· Listen to and respect children
+· Involve children in decision making, as appropriate
+· Provide encouragement, support and praise
+· Use appropriate language
+· Have fun and encourage a positive atmosphere
+· Respect a child’s personal space
+· Use age-appropriate teaching aids and materials
+· Be cognisant of a child’s limitations
+· Create an atmosphere of trust
+· Respect differences of ability, culture, race
+· Be inclusive of children with special needs
+· Plan and be sufficiently prepared
+· Report any concerns to the Child Safeguarding team and follow reporting procedures
+· Encourage children to report any bullying, concerns or worries
+· Observe appropriate dress and behaviour
+· Keep parents/guardians informed of any issues that concern their children
+· Avoid spending excessive amounts of time alone with a child
+· Don’t allow/engage in inappropriate touching of any form
+· Don’t hit or physically chastise children
+· Ensure that any contact with children through social/digital media is in line with the procedures outlined
+· Ensure that any physical contact which is necessary as part of teaching the children activities cannot be deemed to be inappropriate.
+· Avoid horseplay or inappropriate touch
+· Don’t leave children unattended or unsupervised
+· Provide a safe environment by abiding by the procedures outlined in the General Safety and Management section
+ 
+The full Code of Behaviour for Leaders is contained in the Child Safeguarding Policy.
+        Breaches to the Code of Behaviour will be dealt with under the complaints policy and disciplinary procedures.
+ 
+A code of behaviour for members helps to explain children’s rights and responsibilities when taking part in a group’s activities.  For a code of behaviour to work best, children need to be able to develop the code for themselves, with the assistance of leaders.
+It is recommended that at the commencement of the year a code of behaviour be drawn up with the members’ participation for each age group.  While it is recognised that discipline may seem at times to be restrictive to children it is best enforced with their agreement and therefore the members should also be involved with deciding what sanctions should be associated with the code of behaviour.
+The Child Safeguarding Policy details the various elements that an effective code of behaviour should contain.  For older age groups the Code of Behaviour should address the members use of technology at GB.
+
+Once the Code of Behaviour for Members and sanctions have been agreed by the member of the group it can be displayed at weekly meetings or a copy of it given to each child for them to sign.
+</pre>
+    <a id="next" href="/training/part3" style.display="none">Next</a>
+    <audio id="intro_track" autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+
+{% endblock %}

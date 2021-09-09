@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+     <h2 align="center"><span lang="en-gb">Introduction</span></h2>
+
+<div align="center">
+	<img alt="" height="480" width="720" src={% static "assoc.jpg" %} >
+</div>
+
+    <p>&nbsp;</p>
+<div align="center">
+	<p>Listen to Audio</p>
+    <audio id="intro_track" controls autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+</div>
+<div align="center">
+  	  <a id="next" href="part1" style.display="none"><button>Next</button></a>
+</div>
+
+<div align="center" style="margin-top: 20px">
+  	  <p><span lang="en-gb">Click PDF icon for transcript of audio</span>.</p>
+</div>
+	<div align="center">
+  	    <p><img alt="" height="51" width="45" src={% static "g8.png" %}></p>
+</div>
+
+{% endblock %}

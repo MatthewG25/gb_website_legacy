@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Introduction{% endblock %}
+{% block body %}
+    <pre>
+The Girls’ Brigade Ireland values its members and has a programme aimed at the development of girls and young women in which all forms of abuse , bullying and harassment are unacceptable.  We are committed to upholding the rights of every child who attends our organisation including the rights to be kept safe and protected from harm, listened to and heard.
+
+The reporting procedures should always be used when an employee or leader has reasonable grounds for concern that a child may have been, is being or is at risk of being abused or neglected.  If what may be symptoms of abuse are ignored it could result in ongoing harm to the child.  It is not necessary to prove that abuse has occurred to report a concern, all that is required is that there is a reasonable grounds for concern.
+
+Reasonable grounds for concern for a child protection or welfare concern include:
+    • Evidence, for example an injury or behaviour, that is consistent with abuse and is unlikely to have been caused in any other way
+    • Any concern about possible sexual abuse
+    • Consistent signs that a child is suffering from emotional or physical neglect
+    • A child saying or indicating by other means that he or she has been abused
+    • Admission or indication by an adult or a child of an alleged abuse they committed
+    • An account from a person who say the child being abused.
+
+The Child Safeguarding Team consists of Jemma Lee and Olive Good.  Their role is to ensure the implementation of the Child Safeguarding Policy throughout the organisation and support leaders and members in respect of any aspect covered in the Child Safeguarding Policy.  They provide guidance and support to leaders regarding child protection concerns and reports concerns to Tusla as necessary.
+
+
+Dealing with a disclosure
+
+When dealing with a disclosure by a member, leaders should
+    • React calmly
+    • Take the child seriously
+    • Listen carefully and attentively
+    • Reassure the child they have done the right thing in talking to you
+    • Do not promise to keep secrets
+    • Ask questions for clarification only
+    • Do not express any opinions
+    • Ensure that the child understands what will happen next
+    • Maintain confidentiality as appropriate
+    • Report to the Child Safeguarding Team
+
+
+Reporting diagram
+
+The diagram shows you the GB reporting procedure:
+Leaders should make notes about your concern, or any disclosure that has taken place,
+Keep your notes concise just the facts.
+Leaders should contact the Child Safeguarding Team who will offer support and advice.
+The Child Safeguarding Team will seek advice from Tusla about the concern and if required report to Tusla and/or the Gardai.
+Leaders should never hesitate to report a concern, disclosure or allegation to the Child Safeguarding Team even if they are in doubt whether it needs to be reported or not.  The Protection for Persons Reporting Child Abuse Act 1998 provides protection for anyone who reports concerns, disclosures or allegation in good faith and in the child’s best interest even if it is then proven unfounded.  The Child Safeguarding Team have the resources of Tusla available to them to ascertain whether concerns, disclosures or allegations raised by leaders need to be reported to Tusla.
+
+
+If the concern is in relation to a serious offence against a child and needs to be reported to the Gardai under the Criminal Justice (Withholding of Information on Offences against Children and Vulnerable Persons) Act 2012, the Child Safeguarding Team will advise and support the leader to make a report to the Gardai to meet their legal obligations.
+</pre>
+    <a id="next" href="/training/conclusion" style.display="none">Next</a>
+    <audio id="intro_track" autoplay>
+        <source src="{% static 'Part 1.mp3' %}" type="audio.mpeg">
+    </audio>
+    <script>
+        var audio = document.getElementById('intro_track')
+        var button = document.getElementById('next')
+        audio.addEventListener("ended" , (event)=> {
+            button.style.display = "block"
+        })
+    </script>
+
+{% endblock %}
